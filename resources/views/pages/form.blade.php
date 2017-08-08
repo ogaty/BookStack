@@ -7,13 +7,13 @@
     <div class="faded-small toolbar">
         <div class="container">
             <div class="row">
-                <div class="col-sm-4 faded">
+                <div class="col-sm-4 hidden-sm hidden-xs faded">
                     <div class="action-buttons text-left">
                         <a href="{{ back()->getTargetUrl() }}" class="text-button text-primary"><i class="zmdi zmdi-arrow-left"></i>{{ trans('common.back') }}</a>
                         <a onclick="$('body>header').slideToggle();" class="text-button text-primary"><i class="zmdi zmdi-swap-vertical"></i>{{ trans('entities.pages_edit_toggle_header') }}</a>
                     </div>
                 </div>
-                <div class="col-sm-4 faded text-center">
+                <div class="col-sm-4 hidden-sm hidden-xs faded text-center">
 
                     <div ng-show="draftsEnabled" dropdown class="dropdown-container draft-display">
                         <a dropdown-toggle class="text-primary text-button"><span class="faded-text" ng-bind="draftText"></span>&nbsp; <i class="zmdi zmdi-more-vert"></i></a>

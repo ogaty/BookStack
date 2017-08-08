@@ -57,7 +57,7 @@ gulp.task('scripts', () => {scriptTask(false)});
 gulp.task('scripts-watch', () => {scriptTask(true)});
 
 gulp.task('default', ['styles', 'scripts-watch'], () => {
-    gulp.watch("resources/assets/sass/**/*.scss", ['styles']);
+//    gulp.watch("resources/assets/sass/**/*.scss", ['styles']);
 });
 
 gulp.task('build', ['styles', 'scripts']);

@@ -4,8 +4,6 @@
     <script src="{{ baseUrl('/libs/tinymce/tinymce.min.js?ver=4.6.3') }}"></script>
 @stop
 
-@section('body-class', 'flexbox')
-
 @section('content')
 
     <div class="flex-fill flex">

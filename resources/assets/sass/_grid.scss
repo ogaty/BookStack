@@ -243,6 +243,9 @@ div[class^="col-"] img {
 .col-xs-offset-0 {
   margin-left: 0%;
 }
+.hidden-xs {
+  display: none;
+}
 @media (min-width: $screen-sm) {
   .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
     float: left;
@@ -399,6 +402,12 @@ div[class^="col-"] img {
   }
   .col-sm-offset-0 {
     margin-left: 0%;
+  }
+  .hidden-xs {
+    display: block;
+  }
+  .hidden-sm {
+    display: none;
   }
 }
 @media (min-width: $screen-md) {
@@ -557,6 +566,12 @@ div[class^="col-"] img {
   }
   .col-md-offset-0 {
     margin-left: 0%;
+  }
+  .hidden-xs {
+    display: block;
+  }
+  .hidden-sm {
+    display: block;
   }
 }
 @media (min-width: $screen-lg) {

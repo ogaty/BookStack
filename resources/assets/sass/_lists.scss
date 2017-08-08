@@ -1,7 +1,6 @@
 .page-list {
   h4 {
-    margin: $-l 0 $-xs 0;
-    font-size: 1.666em;
+    margin: $-s 0 $-xs 0;
   }
   a.chapter {
     color: $color-chapter;
@@ -16,7 +15,6 @@
     margin: $-s 0 0 0;
     border-left: 5px solid $color-page;
     padding: $-xs 0 $-xs $-m;
-    font-size: 1.1em;
     font-weight: normal;
     &.draft {
       border-left-color: $color-page-draft;
@@ -307,7 +305,7 @@ ul.pagination {
 
 .entity-list {
   > div {
-    padding: $-m 0;
+    padding: $-s 0;
   }
   h4 {
     margin: 0;
@@ -332,9 +330,9 @@ ul.pagination {
 }
 
 .entity-list.compact {
-  font-size: 0.6em;
   h4, a {
     line-height: 1.2;
+    font-size: 1.1em;
   }
   p {
     display: none;
