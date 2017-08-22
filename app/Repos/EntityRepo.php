@@ -14,6 +14,7 @@ use Carbon\Carbon;
 use DOMDocument;
 use DOMXPath;
 use Illuminate\Support\Collection;
+use Parsedown;
 
 class EntityRepo
 {
@@ -799,7 +800,7 @@ class EntityRepo
     public function updatePage(Page $page, $book_id, $input)
     {
         // Hold the old details to compare later
-        $oldHtml = $page->html;
+        $oldHtml = Parsedown::instance()->text($page->md);
         $oldName = $page->name;
 
         // Prevent slug being updated if no name change
@@ -811,12 +812,12 @@ class EntityRepo
         if (isset($input['tags'])) {
             $this->tagRepo->saveTagsToEntity($page, $input['tags']);
         }
-
         // Update with new details
         $userId = user()->id;
         $page->fill($input);
-        $page->html = $this->formatHtml($input['html']);
+        $page->html = Parsedown::instance()->text($input['md']);
         $page->text = strip_tags($page->html);
+        $page->md = $input['md'];
         if (setting('app-editor') !== 'markdown') $page->markdown = '';
         $page->updated_by = $userId;
         $page->revision_count++;
@@ -826,7 +827,7 @@ class EntityRepo
         $this->userUpdatePageDraftsQuery($page, $userId)->delete();
 
         // Save a revision after updating
-        if ($oldHtml !== $input['html'] || $oldName !== $input['name'] || $input['summary'] !== null) {
+        if ($oldHtml !== $input['md'] || $oldName !== $input['name'] || $input['summary'] !== null) {
             $this->savePageRevision($page, $input['summary']);
         }
 
@@ -1077,15 +1078,3 @@ class EntityRepo
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-

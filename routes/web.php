@@ -47,6 +47,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/{bookSlug}/page/{pageSlug}/permissions', 'PageController@showRestrict');
         Route::put('/{bookSlug}/page/{pageSlug}/permissions', 'PageController@restrict');
         Route::put('/{bookSlug}/page/{pageSlug}', 'PageController@update');
+        Route::post('/{bookSlug}/page/{pageSlug}', 'PageController@update');
         Route::delete('/{bookSlug}/page/{pageSlug}', 'PageController@destroy');
         Route::delete('/{bookSlug}/draft/{pageId}', 'PageController@destroyDraft');
 
