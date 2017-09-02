@@ -50,7 +50,7 @@
                     <p class="small">{!! trans('settings.app_logo_desc') !!}</p>
 
                     @include('components.image-picker', [
-                        'resizeHeight' => '43',
+                        'resizeHeight' => '34',
                         'resizeWidth' => '200',
                         'showRemove' => true,
                         'defaultImage' => baseUrl('/logo.png'),

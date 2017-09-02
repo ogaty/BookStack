@@ -23,7 +23,7 @@ header {
   }
   .links a {
     display: inline-block;
-    padding: $-l;
+    padding: $-m;
     color: #FFF;
     &:last-child {
       padding-right: 0;
@@ -42,7 +42,7 @@ header {
   }
   .user-name {
     vertical-align: top;
-    padding-top: $-l;
+    padding-top: $-s;
     display: inline-block;
     cursor: pointer;
     > * {
@@ -89,7 +89,7 @@ header {
 }
 
 form.search-box {
-  margin-top: $-l *0.9;
+  margin-top: $-s;
   display: inline-block;
   position: relative;
   text-align: left;
@@ -125,17 +125,17 @@ form.search-box {
 }
 .logo-text {
   display: inline-block;
-  font-size: 1.8em;
+  font-size: 1.6em;
   color: #fff;
   font-weight: 400;
-  padding: $-l $-l $-l 0;
+  padding: $-m $-l $-m 0;
   vertical-align: top;
   line-height: 1;
 }
 .logo-image {
-  margin: $-m $-s $-m 0;
+  margin: $-s $-s $-s 0;
   vertical-align: top;
-  height: 43px;
+  height: 34px;
 }
 
 .breadcrumbs span.sep {
