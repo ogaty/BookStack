@@ -571,8 +571,9 @@ class EntityRepo
         }
 
         $draftPage->slug = $this->findSuitableSlug('page', $draftPage->name, false, $draftPage->book->id);
-        $draftPage->html = $this->formatHtml($input['html']);
+        $draftPage->html = Parsedown::instance()->text($input['md']);
         $draftPage->text = strip_tags($draftPage->html);
+        $draftPage->md = $input['md'];
         $draftPage->draft = false;
         $draftPage->revision_count = 1;
 
