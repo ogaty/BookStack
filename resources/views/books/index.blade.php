@@ -38,7 +38,6 @@
             <div class="col-sm-4 col-sm-offset-1">
                 <div id="recents">
                     @if($recents)
-                        <div class="margin-top">&nbsp;</div>
                         <h3>{{ trans('entities.recently_viewed') }}</h3>
                         @include('partials/entity-list', ['entities' => $recents])
                     @endif

@@ -28,7 +28,7 @@ return [
     'app_custom_html' => 'カスタムheadタグ',
     'app_custom_html_desc' => 'スタイルシートやアナリティクスコード追加したい場合、ここを編集します。これは<head>の最下部に挿入されます。',
     'app_logo' => 'ロゴ',
-    'app_logo_desc' => '高さ43pxで表示されます。これを上回る場合、自動で縮小されます。',
+    'app_logo_desc' => '高さ34pxで表示されます。これを上回る場合、自動で縮小されます。',
     'app_primary_color' => 'プライマリカラー',
     'app_primary_color_desc' => '16進数カラーコードで入力します。空にした場合、デフォルトの色にリセットされます。',
 

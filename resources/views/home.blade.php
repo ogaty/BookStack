@@ -25,7 +25,7 @@
                     @endif
                 </div>
                 @if($signedIn)
-                    <h4>{{ trans('entities.my_recently_viewed') }}</h4>
+                    <h4>{{ trans('entities.books') }}</h4>
                 @else
                     <h4>{{ trans('entities.books_recent') }}</h4>
                 @endif
@@ -57,6 +57,7 @@
             </div>
 
             <div class="col-sm-4" id="recent-activity">
+                <h4>{{ trans('entities.books') }}</h4>
                 <h4>{{ trans('entities.recent_activity') }}</h4>
                 @include('partials/activity-list', ['activity' => $activity])
             </div>
